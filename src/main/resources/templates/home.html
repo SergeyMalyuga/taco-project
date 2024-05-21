@@ -5,12 +5,14 @@
     <title>Taco Cloud</title>
 </head>
 <body>
-<h1>Welcome to... Malyuga`s Tacos</h1>
+<h1>Welcome to... Malyuga`s Crazy Tacos</h1>
 <form th:method="GET" th:action="@{/design}">
     <div>
-        <button>Design your Taco </button>
+        <button>Design your Taco</button>
     </div>
 </form>
+<label for="name">NAME USER</label>
+<input type="text" id="name"/>
 <img th:src="@{/images/TacoCloud.png}"/>
 </body>
 </html>
