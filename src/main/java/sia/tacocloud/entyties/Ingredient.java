@@ -1,19 +1,19 @@
 package sia.tacocloud.entyties;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.relational.core.mapping.Table;
+
 
 @Data
 @Table
 @Entity
 @AllArgsConstructor
-@RequiredArgsConstructor
+
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 public class Ingredient {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private final String id;
     private final String name;
     private final Type type;

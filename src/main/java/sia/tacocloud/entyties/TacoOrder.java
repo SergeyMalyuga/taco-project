@@ -6,8 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import org.hibernate.validator.constraints.CreditCardNumber;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
+
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class TacoOrder implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date placedAt;
-    @Column("customer_name")
+    @Column(name = "delivery_name")
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
     @NotBlank(message = "Street is required")
