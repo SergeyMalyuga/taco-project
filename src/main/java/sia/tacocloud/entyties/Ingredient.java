@@ -16,5 +16,6 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private final String id;
     private final String name;
+    @Enumerated(EnumType.STRING)
     private final Type type;
 }
