@@ -19,16 +19,12 @@ created_at timestamp WITHOUT TIME ZONE not null
 );
 create table if not exists Ingredient_Ref (
 id identity,
-ingredient varchar(4) not null,
-taco bigint not null,
-taco_key bigint not null
+ingredient_id varchar(4) references Ingredient(id) not null,
+taco_id bigint not null references taco(id)
 );
 create table if not exists Ingredient (
 id varchar(4) unique not null,
 name varchar(25) not null,
 type varchar(10) not null
 );
-/*alter table Taco
-add foreign key (taco_order) references Taco_Order(id);*/
-alter table Ingredient_Ref
-add foreign key (ingredient) references Ingredient(id);
+
